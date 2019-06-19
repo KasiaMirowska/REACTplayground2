@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Split from './composition/Split';
+import './App.css'
+import Tooltip from './composition/Tooltip';
+
+
+const firstTooltip = (
+  <Tooltip  color='hotpink' message='tooltip message'>
+    ahahahahaha
+  </Tooltip>
+)
+const secondTooltip = (
+  <Tooltip  color='red' message='another tooltip message'>
+    blablalalba
+  </Tooltip>
+)
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className='App'>
+      <Split className='left' flexBasis={4}>
+      This is the content for the left `Split`. Lorem {firstTooltip} ipsum dolor sit amet consectetur, adipisicing elit. Incidunt ex velit suscipit facere officia? <br />
+      <Tooltip message='yet another tooltip message'>
+        hihsihihihhi
+      </Tooltip>
+      </Split>
+      <Split className='right' flexBasis={1}>
+      This is the content for the right `Split`. Inventore aliquid cupiditate suscipit repellat. Quaerat {secondTooltip} quis officiis quam fuga. Aliquid quo possimus id soluta aspernatur.
+      </Split>
+      
+    </main>
   );
 }
 
