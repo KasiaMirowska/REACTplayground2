@@ -3,12 +3,10 @@
     cursor: poiner;
 }
 
-.Tooltip-content {
-    color : purple;
-}
+
 
 .Tooltip-message {
-    background-color: hsla(0, 0%, 10%, 0.9);
+    background-color: hsla(245, 27%, 24%, 0.9);
     border-radius: 3px;
     color: #fff;
     left: 4vw;
