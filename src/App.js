@@ -3,7 +3,7 @@ import Split from './composition/Split';
 import './App.css'
 import Tooltip from './composition/Tooltip';
 import Messages from './Messages';
-import TheDate from './state/TheDate';
+// import TheDate from './state/TheDate';
 import Counter from './Counter';
 
 const firstTooltip = (
@@ -32,8 +32,8 @@ function App() {
       </Split>
       <Messages name="Messages" unread={0}/>
       <Messages name="Notifications" unread={10}/>
-      <TheDate />
-      <Counter />
+      {/* <TheDate /> */}
+      <Counter count={123}></Counter>
     </main>
   );
 }
