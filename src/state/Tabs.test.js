@@ -24,10 +24,10 @@ describe('tabs component', () => {
         ReactDOM.unmountComponentAtNode(div);
     })
 
-    // it('renders as expected', () => {
-    //     const tree = renderer.create(<Tabs tabs={tabsProp}/>)
-    //     expect(tree).toMatchSnapshot();
-    // })
+    it('renders as expected', () => {
+        const tree = renderer.create(<Tabs tabs={tabsProp}/>)
+        expect(tree).toMatchSnapshot();
+    })
 
     it('renders empty given no tabs', () => {
         const wrapper = shallow(<Tabs />);
@@ -52,7 +52,7 @@ describe('tabs component', () => {
 
     it('closes the first tab and opens any clicked tab', () => {
         const wrapper = shallow(<Tabs tabs={tabsProp} />)
-        wrapper.find('button').at(1).simulate('click')
+        wrapper.find('button').at(2).simulate('click')
         expect(toJson(wrapper)).toMatchSnapshot()
         })
 })
