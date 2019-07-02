@@ -12,7 +12,7 @@ export default class DemoApp extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://countrlklkkll.register.gov.uk/records.json?page-size=5000')
+        fetch('http://country.register.gov.uk/records.json?page-size=5000')
         .then(response => {
             console.log('About to check for errors')
             if(!response.ok){
